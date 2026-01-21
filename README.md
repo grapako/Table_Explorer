@@ -1,22 +1,68 @@
 JIP Table Explorer
 
-JIP Table Explorer es una herramienta ligera y rápida escrita en Python para visualizar, filtrar y ordenar tablas de datos (CSV, DAT, TXT) de gran tamaño sin necesidad de abrir Excel o software pesado.
+JIP Table Explorer is a robust Python tool designed to load, visualize, and analyze large data tables (CSV, DAT, TXT).
 
-Incluye un lanzador inteligente (.bat) para Windows que detecta automáticamente entornos de Anaconda/Miniconda, facilitando la ejecución inmediata.
+Unlike simply opening a file with a text editor or Notepad, JIP Table Explorer leverages the power of the Pandas library to structure your data. This allows you to sort columns, filter rows in real-time, and handle complex formats (such as scientific notation or irregular separators) that would otherwise be unreadable in a standard editor.
 
-Características
+🚀 Key Features
 
-🚀 Carga Inteligente: Detecta automáticamente separadores (coma, punto y coma, tabulación, espacios múltiples/formato científico).
+More than a viewer: Sort ascending/descending by any numeric or text column simply by clicking the header.
 
-⚡ Rendimiento: Utiliza PyQt5 y Pandas para manejar grandes volúmenes de datos con fluidez.
+Smart Filtering: Integrated search bar with support for Regular Expressions (RegEx) to find specific data points instantly.
 
-🔍 Filtrado en Tiempo Real: Barra de búsqueda con soporte para expresiones regulares (RegEx).
+Robust Loading: Intelligent algorithm that automatically detects the correct separator (commas, tabs, semicolons, or multiple spaces/scientific format).
 
-📂 Multi-ventana: Abre múltiples archivos simultáneamente en ventanas independientes.
+Multi-window: Open and compare multiple files simultaneously in independent windows.
 
-🛠 Smart Batch Launcher: Script .bat que encuentra tu instalación de Conda y activa el entorno necesario automáticamente.
+Smart Launchers: Includes automation scripts to detect your Conda installation or use your system Python.
 
-Requisitos
+📂 Included Files
+
+The repository includes different execution methods and test data:
+
+table_explorer.py: The main application script.
+
+SAMPLE.csv: A sample data file to test sorting and filtering functionalities.
+
+table_explorer_runner1.bat (Smart): The recommended launcher for Anaconda/Miniconda users.
+
+table_explorer_runner2.bat (Direct): A simple launcher for users with Python in their system PATH.
+
+⚙️ Configuration & Usage
+
+Option 1: "Smart" Launcher (Recommended for Conda)
+
+Use the file table_explorer_runner1.bat.
+
+This script is ideal if you use Anaconda or Miniconda virtual environments. It automatically detects where Conda is installed on your PC and activates the necessary environment before running the program.
+
+⚠️ Important Setup Step:
+
+Right-click on table_explorer_runner1.bat and select Edit.
+
+Find the line that says:
+
+set "ENV_NAME=JIP_env"
+
+
+Change JIP_env to the name of the virtual environment where you have installed the required libraries (pandas, pyqt5).
+
+Save and close. You are now ready to double-click and run!
+
+Option 2: "Direct" Launcher
+
+Use the file table_explorer_runner2.bat.
+
+Use this script if you have a standard Python installation and the python command is already configured in your Windows PATH. Simply run the script, and it will open the tool using your default Python interpreter.
+
+Manual Execution (Terminal)
+
+If you prefer using the command line on any operating system (Windows/Linux/Mac):
+
+python table_explorer.py
+
+
+📦 Requirements
 
 Python 3.x
 
@@ -24,40 +70,16 @@ Pandas
 
 PyQt5
 
-Instalación
+Installing Dependencies
 
-Clona este repositorio:
+If you haven't installed the libraries in your environment yet:
 
-git clone [https://github.com/TU_USUARIO/Table_Explorer.git](https://github.com/TU_USUARIO/Table_Explorer.git)
-
-
-Instala las dependencias:
-
-pip install -r requirements.txt
+pip install pandas pyqt5
 
 
-(O usa tu entorno de Conda preferido)
+Credits
 
-Uso
+Author: JIP
+Co-developed with AI assistance: Google Gemini 3.0 PRO
 
-En Windows (Recomendado)
-
-Simplemente haz doble clic en el archivo run_explorer.bat.
-
-El script buscará automáticamente tu instalación de Anaconda o Miniconda.
-
-Activará el entorno (puedes configurar el nombre del entorno en el .bat, por defecto JIP_env).
-
-Si no encuentra Conda, intentará usar el Python del sistema.
-
-En Terminal (Cualquier SO)
-
-python table_explorer.py
-
-
-Créditos y Autoría
-
-Autor: JIP
-Co-desarrollado con asistencia de IA: Google Gemini 3.0 PRO
-
-Este proyecto fue creado para solucionar la necesidad de explorar rápidamente archivos de datos científicos con formatos heterogéneos.
+This project was developed to streamline scientific workflows, allowing for fast and efficient tabular data exploration without the overhead of heavy spreadsheet software.
