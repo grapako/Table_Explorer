@@ -1,0 +1,23 @@
+Python cache
+
+pycache/
+*.py[cod]
+*$py.class
+
+Entornos virtuales (por si acaso creas uno local)
+
+venv/
+env/
+.env
+JIP_env/
+
+Archivos de sistema y logs
+
+.DS_Store
+Thumbs.db
+*.log
+
+IDEs
+
+.vscode/
+.idea/
