@@ -1,20 +1,20 @@
 # JIP Table Explorer
 
-JIP Table Explorer is a robust Python tool designed to load, visualize, and analyze large data tables (CSV, DAT, TXT).
+This is one of my tools to make my life easier when analyzing data. It should save you time, because you just execute a batch file to explore the data.
 
-Unlike simply opening a file with a text editor or Notepad, JIP Table Explorer leverages the power of the Pandas library to structure your data. This allows you to sort columns, filter rows in real-time, and handle complex formats (such as scientific notation or irregular separators) that would otherwise be unreadable in a standard editor.
+JIP Table Explorer is a simple Python tool designed to load, visualize, and analyze large data tables (CSV, DAT, TXT).
+
+Unlike simply opening a file with a text editor or Notepad, JIP Table Explorer leverages the Pandas library to structure your data. This allows you to sort columns, filter rows in real-time, and handle complex formats (such as scientific notation or irregular separators) that would otherwise be unreadable in a standard editor.
 
 ## 🚀 Key Features
 
-* **More than a viewer**: Sort ascending/descending by any numeric or text column simply by clicking the header.
-* **Smart Filtering**: Integrated search bar with support for Regular Expressions (RegEx) to find specific data points instantly.
-* **Robust Loading**: Intelligent algorithm that automatically detects the correct separator (commas, tabs, semicolons, or multiple spaces/scientific format).
+* Sort ascending/descending by any numeric or text column simply by clicking the header.
+* Integrated search bar with support for Regular Expressions (RegEx) to find specific data points instantly.
+* Intelligent algorithm that automatically detects the correct separator (commas, tabs, semicolons, or multiple spaces/scientific format).
 * **Multi-window**: Open and compare multiple files simultaneously in independent windows.
 * **Smart Launchers**: Includes automation scripts to detect your Conda installation or use your system Python.
 
 ## 📂 Included Files
-
-The repository includes different execution methods and test data:
 
 * `table_explorer.py`: The main application script.
 * `SAMPLE.csv`: A sample data file to test sorting and filtering functionalities.
@@ -64,7 +64,5 @@ pip install pandas pyqt5
 
 ## Credits
 
-**Author:** JIP  
+**Author:** Juan Ignacio Peralta 
 **Co-developed with AI assistance:** Google Gemini 3.0 PRO
-
-This project was developed to streamline scientific workflows, allowing for fast and efficient tabular data exploration without the overhead of heavy spreadsheet software.
